@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 Contact us!
+
+    form(method="post")
+        fieldset.form-group
+            label(for="name") Name:
+            input.form-control(name="name", type="text", placeholder="Enter your name", style="margin-bottom: 5px;")
+            label(for="phone") Phone:
+            input.form-control(name="phone", type="text", placeholder="Enter your phone", style="margin-bottom: 5px;")
+            label(for="email") Email:
+            input.form-control(name="email", type="email", placeholder="Enter your email")          
+        button.btn.btn-primary(type="submit") Send contacts
+        a.btn.btn-default(style="margin-left: 5px;", href="/") Cancel    
+    p.text-success(class=status === "ok" ? "": "hidden") Thank you! Your contacts were sent
+    p.text-danger(class=status === "error" ? "": "hidden") Please fill all data
+    

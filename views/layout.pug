@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title= title
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/style.css")
+    body
+        nav.navbar.navbar-default.navbar-fixed-top
+            .container
+                #navbar.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li(class=name === 'index' ? "active" : "")
+                            a(href='/') Home
+                        li(class=name === 'courses' ? "active" : "")
+                            a(href='/courses') Courses
+                        li(class=name === 'about' ? "active" : "")
+                            a(href='/about') About us
+                        li(class=name === 'contacts' ? "active" : "")
+                            a(href='/contacts') Contacts    
+
+        .container
+            .main-content
+                block content                      

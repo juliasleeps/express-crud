@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 All courses
+
+    form(method="post")
+        fieldset.form-group
+            label(for="name") Name:
+            input.form-control(name="name", type="text", placeholder="Enter course name")
+            small.text-muted Add your new course
+        button.btn.btn-primary(type="submit") Create course
+        a.btn.btn-default(style="margin-left: 5px;", href="/courses") Cancel
